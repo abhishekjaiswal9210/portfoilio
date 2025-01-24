@@ -1,0 +1,450 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background: #021526;
+    color: #03346E;
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    grid:3vmin;
+    padding: 20px;
+    color:#E2E2B6;
+    background:#021526;
+    margin-top: 2vmin;
+    margin-bottom: 3vmin;
+}
+
+.title h1{
+  font-family: monospace;
+}
+.title{
+  font-family: serif;
+  font-size: large;
+  display: flex;
+  margin: 4vmin 4vmin 0 4vmin;
+  align-items: center;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+.profilepic{
+    background-image: url(tired\ person.png);
+    background-size: cover;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 30vmin;
+    width: 30vmin;
+    border-radius: 50%;
+    box-shadow: 10px 7px #E2E2B6;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero {
+    background:#6EACDA;
+    color: #03346E;
+    padding: 80px 20px;
+}
+
+
+
+.portfolio img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.portfolio img:hover {
+    transform: scale(1.1);
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact button:hover {
+    background: #555;
+}
+
+footer {
+    font-family: serif;
+    color: #021526;
+    background-color: #E2E2B6;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius:40px ;
+    border-top-right-radius:40px ;
+  
+}
+
+.social-media{
+  font-size: x-large;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4vmin;
+  margin: 2vmin;
+}
+.social-media i:hover{
+ scale: 1.4;
+ transition: 0.2s ease;
+}
+#media{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 2vmin;
+}
+
+
+#whatsapp{
+  display: flex;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  margin: 2vmin;
+}
+#whatsapp i{
+  margin:10px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+#gallery{
+  font-family: serif;
+  background-color: #E2E2B6;
+  padding: 20px;
+  border-radius:40px ;
+  margin: 10px;
+  background-image: url(pattern2.png);
+  background-size: cover;
+  /* border-top-right-radius:40px ; */
+
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 4vmin;
+  padding-bottom: 4vmin;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.gallery img{
+  height: 20vmin;
+  border-radius: 20px;
+}
+
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    -webkit-backdrop-filter: blur(8px);  /* Safari 9+ */
+    backdrop-filter: blur(8px); /* Chrome and Opera */
+    box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
+    background-color: rgb(228 228 228 / 15%);
+
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+  }
+  
+
+  /* The Close Button */
+  .close {
+    z-index:9999 ;
+    background-color: #db2020;
+    color: white;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+    right: 10px;
+    height: 7vmin;
+    width: 7vmin;
+    font-size: 7vmin;
+    font-weight: bold;
+    border-radius: 30%;
+  }
+  
+  .close:hover,
+  .close:focus {
+    scale: 1.1;
+    transition: 0.1s ease;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+    /* justify-content: center; */
+
+  }
+  .mySlides img {
+    border-radius: 20px;
+    width: 75vw;
+
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    position: absolute;
+    cursor: pointer;
+    bottom: 46%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size:5vmin;
+    transition: 0.6s ease;
+    border-radius: 10px;
+    user-select: none;
+    margin: 10px;
+    -webkit-backdrop-filter: blur(5px);  /* Safari 9+ */
+    backdrop-filter: blur(5px); /* Chrome and Opera */
+    box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 10%);
+    background-color: rgb(228 228 228 / 10%);
+
+  }
+
+  .next:hover{
+    background: #000000a6;
+  }
+  .prev:hover{
+    background: #000000a6;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 5%;
+  }
+  .prev {
+    left: 5%;
+  }
+
+
+  
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 2.5vmin;
+    padding: 2vmin;
+    margin: 2vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+    -webkit-backdrop-filter: blur(5px);  /* Safari 9+ */
+    backdrop-filter: blur(5px); /* Chrome and Opera */
+    box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 10%);
+    background-color: rgb(228 228 228 / 10%);
+
+
+  }
+  
+  .hover-shadow:hover {
+    scale: 1.2;
+    transition: 0.2s ease;
+    box-shadow: 0px 0px 10px black;
+  }  
+  
+
+
+  /* THE HIGHLIGHTS */
+
+  .highlights span{
+    position: absolute;
+    left: 10%;
+    font-size: 2.7vw;
+    font-weight: 700;
+    padding: 2vmin;
+    border-radius: 2vmin;
+    background: #E2E2B6;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    color:#021526; 
+  }
+  .highlights{
+    font-family: serif;
+  
+  }
+  .highlightsin{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .slider {
+    position: relative;
+    width: 60vw;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+.ffour {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.back,
+.forward {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    padding: 1vmin;
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(5px);
+    /* Safari 9+ */
+    backdrop-filter: blur(5px);
+    /* Chrome and Opera */
+    box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 10%);
+    background-color: rgb(228 228 228 / 10%);
+
+}
+
+.back {
+    left: 10px;
+}
+
+.forward {
+    right: 10px;
+}
+
+/* Modal styles */
+.fullview {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    -webkit-backdrop-filter: blur(5px);
+    /* Safari 9+ */
+    backdrop-filter: blur(5px);
+    /* Chrome and Opera */
+    box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 10%);
+    background-color: rgb(228 228 228 / 10%);
+}
+
+.fullviewin {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullview-content {
+    display: block;
+    width: 80vw;
+    animation: fadeIn 0.3s;
+    border-radius: 2vmin;
+
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.end {
+    z-index: 9999;
+    background-color: #db2020;
+    color: white;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 40px;
+    height: 7vmin;
+    width: 7vmin;
+    font-size: 7vmin;
+    font-weight: bold;
+    border-radius: 30%;
+    cursor: pointer;
+}

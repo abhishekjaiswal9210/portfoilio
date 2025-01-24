@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnail Creator Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="main">
+            <div class="profilepic fade-in"></div>
+
+        </div>
+        <div class="title fade-in">
+            <div>
+                <h1>Hi! I'm Abhishek Sim</h1>
+                <p>I specialize in creating thumbnails for gaming, vlogs, and tech content using tools like Photoshop
+                    and Canva.</p>
+            </div>
+
+        </div>
+    </header>
+    <div class="highlights">
+        <div class="text">
+            <span>HIHGLIGHTS</span>
+
+        </div>
+        <div class="highlightsin">
+            <div class="slider">
+                <div class="ffour">
+                    <div class="slide" onclick="enlargeImage('1.jpeg')"><img src="1.jpeg" alt="Image 1"></div>
+                    <div class="slide" onclick="enlargeImage('2.jpeg')"><img src="2.jpeg" alt="Image 2"></div>
+                    <div class="slide" onclick="enlargeImage('3.jpeg')"><img src="3.jpeg" alt="Image 3"></div>
+                    <div class="slide" onclick="enlargeImage('4.jpeg')"><img src="4.jpeg" alt="Image 4"></div>
+                </div>
+                <button class="back" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="forward" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+            <div>
+                <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+
+            </div>
+
+            <!-- Modal for full-screen view -->
+            <div class="fullview" id="imageModal">
+                <div class="fullviewin">
+                    <p class="end" onclick="exitModal()">&times;</p>
+                    <img class="fullview-content" id="fullviewImage">
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="gallery">
+        <h2 style="text-align: center; color:#021526; ">My Works</h2>
+        <div class="gallery fade-in">
+            <img src="1.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            <img src="2.jpeg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            <img src="3.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            <img src="4.jpeg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            <img src="5.jpeg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+            <img src="6.jpeg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+            
+
+        </div>
+
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="1.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="2.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="3.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="4.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="5.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="6.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="kaustub.jpg">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+    </div>
+
+    <footer>
+        <div id="media">
+            <div class="social-media">
+                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div id="whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+                <p style="font-size: medium;">(+91) 98378727878</p>
+            </div>
+
+        </div>
+        <p> &copy; 2024 Designed by Ankur Rabha
+        </p>
+    </footer>
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
